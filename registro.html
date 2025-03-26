@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registro.css">
+    <title>Registro - GlobalMarket</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo"> <span>🛒</span> GlobalMarket</div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Contacto</a>
+            <a href="#">Nosotros</a>
+            <button class="cart-button">🛒 Mis compras</button>
+        </nav>
+    </header>
+
+    <div class="registro-container">
+        <h1>Registro</h1>
+        <p>Completa el formulario y obtén tu regalo sorpresa </p>
+
+        <form action="#" method="post" onsubmit="return validarFormulario()">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required>
+
+            <div class="botones">
+                <button type="button" onclick="window.history.back()"> Volver</button>
+                <button type="submit"> Registrar</button>
+            </div>
+        </form>
+
+        <p>¿Ya tienes una cuenta? <a href="#">presiona aquí</a></p>
+    </div>
+
+    <footer>
+        <div class="footer-info">
+            <p>📍 Carretera H, frente al CC Fiorella, Cabimas, Edo. Zulia.</p>
+            <p>📲 @globalmarket__ | +58 414-3646183</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Derechos Legales</a>
+            <a href="#">FAQ</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Términos de Uso</a>
+        </div>
+    </footer>
+
+    <script>
+        function validarFormulario() {
+            const nombre = document.getElementById("nombre").value.trim();
+            const apellido = document.getElementById("apellido").value.trim();
+            const telefono = document.getElementById("telefono").value.trim();
+
+            if (nombre === "" || apellido === "" || telefono === "") {
+                alert("Por favor, completa todos los campos.");
+                return false;
+            }
+
+            alert("¡Registro exitoso! 🎉");
+            return true;
+        }
+    </script>
+</body>
+</html>
+
+

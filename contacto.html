@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="mask-icon" href="img/logo.png" color="#color-hex">
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="mask-icon" href="img/logo.png" color="#color-hex">
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <title>Contacto - GlobalMarket</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6a3093 0%, #a044ff 100%);
+            animation: slideIn 1s ease-out forwards;
+  transform: translateY(20px);
+  opacity: 0;
+        }
+        @keyframes slideIn {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+        
+        .contact-container {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+            margin: 20px;
+        }
+        
+        .logo-container {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-container img {
+            height: 50px;
+        }
+        
+        .contact-form {
+            padding: 30px;
+        }
+        
+        h2 {
+            color: #6a3093;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 24px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: bold;
+        }
+        
+        .input-group input,
+        .input-group textarea,
+        .input-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        [logo-animated] {
+            display: inline-block;
+            perspective: 1000px;
+        }
+  
+        [logo-animated] img.footer-logo {
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+  
+        [logo-animated] img.footer-logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            filter: brightness(1.05); /* Ligero aumento de brillo */
+        }
+        
+        .input-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .input-group input:focus,
+        .input-group textarea:focus,
+        .input-group select:focus {
+            border-color: #ffc107;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+        }
+        
+        .phone-container {
+            position: relative;
+        }
+        
+        .phone-prefix {
+            position: absolute;
+            right: auto;
+            left: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6a3093;
+            font-weight: bold;
+            background: #ffffff;
+            padding: 0 5px;
+            border-radius: 4px;
+        }
+        
+        .phone-input {
+            padding-left: 45px !important;
+        }
+        
+        .contact-button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(to right, #ffc107, #ffab00);
+            border: none;
+            border-radius: 8px;
+            color: #6a3093;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .contact-button:hover {
+            background: linear-gradient(to right, #ffab00, #ff9800);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+        }
+        
+        .contact-info {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: #f0e6ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: #6a3093;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <div logo-animated>
+            <a href="index.html" ><img src="img/logo.png" alt="GlobalMarket Logo" class="footer-logo">  </a> 
+        </div>
+        
+        <div class="contact-form">
+            <h2>Contáctanos</h2>
+            
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="name">Nombre Completo</label>
+                    <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre completo">
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="Ingresa tu correo electrónico">
+                </div>
+                
+                <div class="input-group">
+                    <label for="phone">Teléfono</label>
+                    <div class="phone-container">
+                        <span class="phone-prefix">+58</span>
+                        <input type="tel" id="phone" name="phone" placeholder="Ej. 4126834089" class="phone-input" pattern="[0-9]{10}">
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="subject">Asunto</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Selecciona un asunto</option>
+                        <option value="soporte">Soporte Técnico</option>
+                        <option value="ventas">Consultas de Ventas</option>
+                        <option value="facturacion">Facturación</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" required placeholder="Describe tu consulta en detalle..."></textarea>
+                </div>
+                
+                <button type="submit" class="contact-button">Enviar Mensaje</button>
+            </form>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>contacto@globalmarket.com</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div>+58 (412) 683-4089</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🏢</div>
+                    <div>Fuerzas Armadas, Maracaibo, Venezuela</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Validación básica del teléfono
+        document.getElementById('phone').addEventListener('input', function(e) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    </script>
+</body>
+</html>
